@@ -1,0 +1,77 @@
+/* Reveal + micro-animations */
+
+/* Reveal lines (word-by-word) */
+.reveal-lines .char {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.reveal-lines.is-in .char {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform .9s cubic-bezier(.2,.7,.2,1), opacity .6s ease;
+  transition-delay: calc(var(--i, 0) * 12ms);
+}
+
+/* Fade up */
+.fade-up { opacity: 0; transform: translateY(30px); transition: opacity 1s ease, transform 1s cubic-bezier(.2,.7,.2,1); will-change: opacity, transform; }
+.fade-up.is-in { opacity: 1; transform: none; }
+/* Ensure hero content is always visible even if observer is late */
+.hero__eyebrow.fade-up, .hero__bio.fade-up, .hero__ctas.fade-up, .hero__stats.fade-up, .hero__card.fade-up { opacity: 1; transform: none; }
+
+/* Custom cursor */
+.cursor {
+  position: fixed; top: 0; left: 0;
+  width: 0; height: 0;
+  z-index: 300;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+.cursor__dot {
+  position: absolute;
+  top: 0; left: 0;
+  width: 6px; height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 12px rgba(0,229,255,.7), 0 0 30px rgba(91,140,255,.4);
+  transition: transform .18s ease, background .3s;
+}
+.cursor__ring {
+  position: absolute;
+  top: 0; left: 0;
+  width: 34px; height: 34px;
+  margin: -17px 0 0 -17px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.35);
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, background .35s, width .35s, height .35s, margin .35s;
+}
+.cursor__label {
+  position: absolute;
+  top: 0; left: 0;
+  margin: 20px 0 0 20px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #050816;
+  background: var(--cyan);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .3s, transform .3s;
+}
+.cursor.is-hover .cursor__ring {
+  width: 60px; height: 60px; margin: -30px 0 0 -30px;
+  border-color: rgba(0,229,255,.7);
+  background: rgba(0,229,255,.06);
+}
+.cursor.is-click .cursor__ring { transform: scale(.75); }
+.cursor.is-label .cursor__label { opacity: 1; transform: translateY(0); }
+.cursor.is-view .cursor__ring {
+  width: 88px; height: 88px; margin: -44px 0 0 -44px;
+  border-color: rgba(139,92,246,.7);
+  background: rgba(139,92,246,.1);
+}

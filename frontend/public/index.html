@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#050816" />
+
+  <title>Protyasha Pahari — AI &amp; Machine Learning Engineer</title>
+  <meta name="description" content="Protyasha Pahari — AI & Machine Learning Engineer. Engineering intelligent systems with Artificial Intelligence, Machine Learning, Python, and Automation." />
+  <meta name="author" content="Protyasha Pahari" />
+  <meta name="keywords" content="Protyasha Pahari, AI Engineer, Machine Learning, Python, Data Science, Automation, RPA, KIIT" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Protyasha Pahari — AI & Machine Learning Engineer" />
+  <meta property="og:description" content="Engineering Intelligent Systems with Artificial Intelligence." />
+  <meta property="og:image" content="%PUBLIC_URL%/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Protyasha Pahari — AI & Machine Learning Engineer" />
+  <meta name="twitter:description" content="Engineering Intelligent Systems with Artificial Intelligence." />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Protyasha Pahari",
+    "jobTitle": "AI & Machine Learning Engineer",
+    "email": "mailto:03protyashapahari@gmail.com",
+    "url": "https://github.com/Protyasha03",
+    "sameAs": [
+      "https://github.com/Protyasha03",
+      "https://www.linkedin.com/in/protyasha-pahari-548791365"
+    ],
+    "alumniOf": "Kalinga Institute of Industrial Technology"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/style.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/navbar.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/hero.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/about.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/skills.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/projects.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/achievements.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/education.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/contact.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/animations.css" />
+</head>
+<body>
+  <div id="root" style="display:none"></div>
+
+  <!-- Noise + gradient wash -->
+  <div class="noise-layer" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb--a" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb--b" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb--c" aria-hidden="true"></div>
+
+  <!-- Neural network canvas -->
+  <canvas id="neural-net" aria-hidden="true"></canvas>
+
+  <!-- Custom cursor -->
+  <div class="cursor" data-testid="custom-cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label"></div>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader" data-testid="page-loader">
+    <div class="loader__inner">
+      <div class="loader__logo">
+        <span>P</span><span>P</span>
+      </div>
+      <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+      <div class="loader__label">Initializing neural interface</div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="nav" data-testid="navbar">
+    <a href="#hero" class="nav__logo magnetic" data-testid="nav-logo">
+      <span class="nav__logo-mark">PP</span>
+      <span class="nav__logo-text">Protyasha<span class="nav__logo-dot">.</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about"       class="nav__link magnetic" data-testid="nav-about">About</a>
+      <a href="#experience"  class="nav__link magnetic" data-testid="nav-experience">Experience</a>
+      <a href="#skills"      class="nav__link magnetic" data-testid="nav-skills">Skills</a>
+      <a href="#projects"    class="nav__link magnetic" data-testid="nav-projects">Work</a>
+      <a href="#education"   class="nav__link magnetic" data-testid="nav-education">Education</a>
+      <a href="#contact"     class="nav__link magnetic" data-testid="nav-contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav__cta magnetic" data-testid="nav-cta">
+      <span>Let's talk</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <button class="nav__burger" aria-label="Menu" data-testid="nav-burger"><span></span><span></span></button>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero" data-testid="hero-section">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <div class="hero__eyebrow" data-testid="hero-eyebrow">
+          <span class="hero__pulse"></span>
+          <span>Available for AI / ML roles &amp; research</span>
+        </div>
+
+        <h1 class="hero__title" data-testid="hero-title">
+          <span class="line"><span class="word">Engineering</span> <span class="word">Intelligent</span></span>
+          <span class="line"><span class="word gradient-text">Systems</span> <span class="word">with</span></span>
+          <span class="line"><span class="word gradient-text">Artificial</span> <span class="word gradient-text">Intelligence.</span></span>
+        </h1>
+
+        <p class="hero__sub" data-testid="hero-sub">
+          <span class="hero__type" data-strings='["Artificial Intelligence","Machine Learning","Python","Data Science","Automation"]'></span>
+          <span class="hero__caret"></span>
+          <span class="hero__sub-fixed">— crafted end-to-end.</span>
+        </p>
+
+        <p class="hero__bio" data-testid="hero-bio">
+          I build AI-powered software systems that solve real-world problems — from
+          intelligent automation to signal processing and data-driven decisioning.
+        </p>
+
+        <div class="hero__ctas">
+          <a href="#projects" class="btn btn--primary magnetic" data-testid="hero-cta-work">
+            <span class="btn__label">See selected work</span>
+            <span class="btn__glow"></span>
+          </a>
+          <a href="%PUBLIC_URL%/assets/resume.pdf" class="btn btn--ghost magnetic" data-testid="hero-cta-resume" download>
+            <span class="btn__label">Download resume</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+          </a>
+        </div>
+
+        <div class="hero__stats" data-testid="hero-stats">
+          <div class="hero__stat">
+            <div class="hero__stat-num" data-count="8.33" data-decimals="2">0</div>
+            <div class="hero__stat-label">CGPA · KIIT</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-num" data-count="5">0</div>
+            <div class="hero__stat-label">Shipped projects</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-num" data-count="10" data-suffix="%">0</div>
+            <div class="hero__stat-label">Top decile · IITG</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-num" data-count="3">0</div>
+            <div class="hero__stat-label">Research bodies</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating glass profile card -->
+      <aside class="hero__card glass tilt" data-testid="hero-profile-card">
+        <div class="hero__card-header">
+          <div class="hero__card-avatar">
+            <div class="hero__card-avatar-ring"></div>
+            <span>PP</span>
+          </div>
+          <div>
+            <div class="hero__card-name">Protyasha Pahari</div>
+            <div class="hero__card-role">AI &amp; ML Engineer</div>
+          </div>
+          <div class="hero__card-status">
+            <span class="hero__pulse"></span> online
+          </div>
+        </div>
+
+        <div class="hero__card-body">
+          <div class="hero__card-row">
+            <div class="hero__card-key">Location</div>
+            <div class="hero__card-val">Bhubaneswar, IN</div>
+          </div>
+          <div class="hero__card-row">
+            <div class="hero__card-key">Focus</div>
+            <div class="hero__card-val">AI · ML · Automation</div>
+          </div>
+          <div class="hero__card-row">
+            <div class="hero__card-key">Stack</div>
+            <div class="hero__card-val">Python · PyTorch · UiPath</div>
+          </div>
+          <div class="hero__card-row">
+            <div class="hero__card-key">Open to</div>
+            <div class="hero__card-val">Research · SDE-AI · Intern</div>
+          </div>
+        </div>
+
+        <div class="hero__card-foot">
+          <a class="chip magnetic" href="https://github.com/Protyasha03" target="_blank" rel="noopener" data-testid="hero-github">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12A11.5 11.5 0 0 0 8.36 22.9c.58.11.79-.25.79-.55 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.77 1.06.77 2.14 0 1.55-.01 2.8-.01 3.18 0 .3.21.67.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            GitHub
+          </a>
+          <a class="chip magnetic" href="https://www.linkedin.com/in/protyasha-pahari-548791365" target="_blank" rel="noopener" data-testid="hero-linkedin">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.71h.05c.53-.94 1.82-1.93 3.75-1.93 4.01 0 4.75 2.64 4.75 6.08V21H18v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.92 1.3-1.92 2.63V21H10z"/></svg>
+            LinkedIn
+          </a>
+          <a class="chip magnetic" href="mailto:03protyashapahari@gmail.com" data-testid="hero-mail">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Email
+          </a>
+        </div>
+
+        <div class="hero__card-glow"></div>
+      </aside>
+    </div>
+
+    <a href="#about" class="hero__scroll" data-testid="hero-scroll">
+      <span class="hero__scroll-label">scroll</span>
+      <span class="hero__scroll-line"><span></span></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about section" data-testid="about-section">
+    <div class="section__eyebrow"><span>01</span> About</div>
+    <h2 class="section__title reveal-lines">
+      A student engineer building <em>intelligent</em> software
+      that thinks, learns, and <em>acts</em>.
+    </h2>
+
+    <div class="about__grid">
+      <div class="about__lead glass" data-testid="about-lead">
+        <p>
+          I'm <strong>Protyasha</strong> — an Electronics &amp; Computer Science
+          undergraduate at KIIT, exploring the intersection of <em>Artificial
+          Intelligence</em>, <em>Machine Learning</em>, and <em>Intelligent
+          Automation</em>. I'm drawn to problems that sit between data, code
+          and the physical world.
+        </p>
+        <p>
+          I ship end-to-end: from designing signal-processing pipelines and
+          RPA workflows to training models and shaping the interfaces around
+          them. My north star is <em>practical intelligence</em> — systems
+          that quietly do the work of ten people.
+        </p>
+      </div>
+
+      <ul class="about__stats" data-testid="about-stats">
+        <li class="glass"><div class="about__stat-num" data-count="8.33" data-decimals="2">0</div><div class="about__stat-label">Current CGPA</div></li>
+        <li class="glass"><div class="about__stat-num" data-count="5">0</div><div class="about__stat-label">Live projects</div></li>
+        <li class="glass"><div class="about__stat-num" data-count="8">0</div><div class="about__stat-label">Certifications</div></li>
+        <li class="glass"><div class="about__stat-num" data-count="3">0</div><div class="about__stat-label">R&amp;D roles</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience section" data-testid="experience-section">
+    <div class="section__eyebrow"><span>02</span> Experience</div>
+    <h2 class="section__title reveal-lines">
+      Building with <em>research groups</em> and communities
+      shaping tomorrow's engineers.
+    </h2>
+
+    <div class="exp__timeline">
+      <article class="exp__card glass tilt" data-testid="exp-ieee">
+        <div class="exp__badge">R&amp;D</div>
+        <div class="exp__role">Signal Processing Systems — Member</div>
+        <div class="exp__org">IEEE Student Branch, KIIT</div>
+        <p class="exp__desc">Contributing to research explorations across DSP, computer vision and applied ML — from paper deep-dives to prototype builds.</p>
+        <ul class="exp__tags"><li>DSP</li><li>ML</li><li>Research</li></ul>
+      </article>
+
+      <article class="exp__card glass tilt" data-testid="exp-usc">
+        <div class="exp__badge">Community</div>
+        <div class="exp__role">Member</div>
+        <div class="exp__org">USC KIIT · University Students Community</div>
+        <p class="exp__desc">Collaborating across disciplines — organising workshops, hackathon prep and mentorship sprints for junior batches.</p>
+        <ul class="exp__tags"><li>Community</li><li>Workshops</li></ul>
+      </article>
+
+      <article class="exp__card glass tilt" data-testid="exp-nss">
+        <div class="exp__badge">Content · R&amp;D</div>
+        <div class="exp__role">Content Writer — R&amp;D</div>
+        <div class="exp__org">NSS Lakshya, KIIT</div>
+        <p class="exp__desc">Translating technical research into readable narratives; running R&amp;D research sprints on social-impact automation projects.</p>
+        <ul class="exp__tags"><li>Writing</li><li>Research</li><li>Impact</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills section" data-testid="skills-section">
+    <div class="section__eyebrow"><span>03</span> Skills</div>
+    <h2 class="section__title reveal-lines">
+      A stack tuned for <em>learning systems</em>,
+      <em>automation</em> and everything in between.
+    </h2>
+
+    <div class="skills__cloud" data-testid="skills-cloud">
+      <span class="bubble bubble--xl" data-cat="core"    style="--x:0%;--y:12%;">Machine Learning</span>
+      <span class="bubble bubble--xl" data-cat="core"    style="--x:70%;--y:6%;">Python</span>
+      <span class="bubble bubble--lg" data-cat="core"    style="--x:34%;--y:0%;">Artificial Intelligence</span>
+      <span class="bubble bubble--lg" data-cat="core"    style="--x:88%;--y:22%;">Data Science</span>
+      <span class="bubble bubble--lg" data-cat="core"    style="--x:14%;--y:36%;">Automation</span>
+      <span class="bubble bubble--md" data-cat="core"    style="--x:52%;--y:20%;">Deep Learning</span>
+      <span class="bubble bubble--md" data-cat="core"    style="--x:72%;--y:40%;">NLP</span>
+      <span class="bubble bubble--md" data-cat="core"    style="--x:2%;--y:56%;">Computer Vision</span>
+
+      <span class="bubble bubble--md" data-cat="cs"      style="--x:26%;--y:58%;">DSA</span>
+      <span class="bubble bubble--md" data-cat="cs"      style="--x:44%;--y:44%;">C++</span>
+      <span class="bubble bubble--sm" data-cat="cs"      style="--x:60%;--y:60%;">OS · DBMS</span>
+      <span class="bubble bubble--sm" data-cat="cs"      style="--x:82%;--y:56%;">Networking</span>
+
+      <span class="bubble bubble--md" data-cat="sec"     style="--x:18%;--y:78%;">Embedded Systems</span>
+      <span class="bubble bubble--md" data-cat="sec"     style="--x:40%;--y:82%;">IoT</span>
+      <span class="bubble bubble--sm" data-cat="sec"     style="--x:60%;--y:80%;">Signal Processing</span>
+      <span class="bubble bubble--sm" data-cat="sec"     style="--x:80%;--y:78%;">Arduino</span>
+
+      <span class="bubble bubble--sm" data-cat="tools"   style="--x:6%;--y:20%;">UiPath</span>
+      <span class="bubble bubble--sm" data-cat="tools"   style="--x:92%;--y:44%;">Pandas</span>
+      <span class="bubble bubble--sm" data-cat="tools"   style="--x:30%;--y:26%;">NumPy</span>
+      <span class="bubble bubble--sm" data-cat="tools"   style="--x:56%;--y:6%;">scikit-learn</span>
+      <span class="bubble bubble--sm" data-cat="tools"   style="--x:12%;--y:92%;">Git</span>
+      <span class="bubble bubble--sm" data-cat="tools"   style="--x:48%;--y:96%;">Linux</span>
+      <span class="bubble bubble--sm" data-cat="tools"   style="--x:74%;--y:92%;">MATLAB</span>
+    </div>
+
+    <ul class="skills__legend">
+      <li><span class="dot dot--core"></span>Core AI/ML</li>
+      <li><span class="dot dot--cs"></span>Core CS</li>
+      <li><span class="dot dot--sec"></span>Embedded &amp; IoT</li>
+      <li><span class="dot dot--tools"></span>Tools</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects section" data-testid="projects-section">
+    <div class="section__eyebrow"><span>04</span> Selected Work</div>
+    <h2 class="section__title reveal-lines">
+      Five products. One thread — <em>intelligence in the wild</em>.
+    </h2>
+
+    <div class="projects__list" data-testid="projects-list">
+      <!-- 01 -->
+      <article class="project glass" data-index="01" data-mockup="dashboard" data-testid="project-rpa">
+        <div class="project__meta">
+          <div class="project__index">01</div>
+          <div class="project__cat">RPA · Automation</div>
+        </div>
+        <div class="project__inner">
+          <div class="project__copy">
+            <h3 class="project__title">RPA-Based Social Media Automation</h3>
+            <div class="project__block">
+              <div class="project__label">Problem</div>
+              <p>Manually scheduling, cross-posting and moderating social content across networks is brittle and time-expensive for creators and small teams.</p>
+            </div>
+            <div class="project__block">
+              <div class="project__label">Solution</div>
+              <p>A UiPath-orchestrated RPA workflow that ingests a content calendar, generates variant captions, and posts + monitors across platforms with human-in-the-loop review.</p>
+            </div>
+            <div class="project__block">
+              <div class="project__label">Impact</div>
+              <p>Cuts posting overhead by ~85% and standardises brand voice with rule-based captioning.</p>
+            </div>
+            <ul class="project__stack">
+              <li>UiPath</li><li>Python</li><li>Selenium</li><li>REST APIs</li>
+            </ul>
+            <div class="project__ctas">
+              <a class="btn btn--sm magnetic" href="https://github.com/Protyasha03" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--sm btn--ghost magnetic" href="#contact">Live Demo</a>
+            </div>
+          </div>
+          <div class="project__mockup" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="project glass" data-index="02" data-mockup="phone" data-testid="project-news">
+        <div class="project__meta">
+          <div class="project__index">02</div>
+          <div class="project__cat">NLP · Web Scraping</div>
+        </div>
+        <div class="project__inner">
+          <div class="project__copy">
+            <h3 class="project__title">Automated News Extraction</h3>
+            <div class="project__block">
+              <div class="project__label">Problem</div>
+              <p>Following breaking stories across dozens of publishers is impossible manually; noise drowns the signal.</p>
+            </div>
+            <div class="project__block">
+              <div class="project__label">Solution</div>
+              <p>A pipeline that crawls curated sources, deduplicates via TF-IDF + cosine similarity, and summarises stories into a personal digest.</p>
+            </div>
+            <div class="project__block">
+              <div class="project__label">Impact</div>
+              <p>~30 minutes of daily reading condensed into a 2-minute digest.</p>
+            </div>
+            <ul class="project__stack"><li>Python</li><li>BeautifulSoup</li><li>NLTK</li><li>scikit-learn</li></ul>
+            <div class="project__ctas">
+              <a class="btn btn--sm magnetic" href="https://github.com/Protyasha03" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--sm btn--ghost magnetic" href="#contact">Live Demo</a>
+            </div>
+          </div>
+          <div class="project__mockup" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <!-- 03 -->
+      <article class="project glass" data-index="03" data-mockup="radar" data-testid="project-radar">
+        <div class="project__meta">
+          <div class="project__index">03</div>
+          <div class="project__cat">DSP · AI</div>
+        </div>
+        <div class="project__inner">
+          <div class="project__copy">
+            <h3 class="project__title">Automatic Radar-Based Target Detection System</h3>
+            <div class="project__block">
+              <div class="project__label">Problem</div>
+              <p>Detecting and classifying moving targets in noisy radar returns requires precise DSP + ML fusion.</p>
+            </div>
+            <div class="project__block">
+              <div class="project__label">Solution</div>
+              <p>CFAR-based detection front-end feeding a lightweight classifier trained on synthetic + real returns; outputs range/velocity + class in real-time.</p>
+            </div>
+            <div class="project__block">
+              <div class="project__label">Impact</div>
+              <p>Robust detection under low SNR; suitable for embedded deployment.</p>
+            </div>
+            <ul class="project__stack"><li>MATLAB</li><li>Python</li><li>DSP</li><li>ML</li></ul>
+            <div class="project__ctas">
+              <a class="btn btn--sm magnetic" href="https://github.com/Protyasha03" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--sm btn--ghost magnetic" href="#contact">Live Demo</a>
+            </div>
+          </div>
+          <div class="project__mockup" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="project glass" data-index="04" data-mockup="parking" data-testid="project-parking">
+        <div class="project__meta">
+          <div class="project__index">04</div>
+          <div class="project__cat">IoT · Embedded</div>
+        </div>
+        <div class="project__inner">
+          <div class="project__copy">
+            <h3 class="project__title">Smart Parking System</h3>
+            <div class="project__block">
+              <div class="project__label">Problem</div>
+              <p>City drivers spend up to 30% of their trip circling for parking, increasing traffic and emissions.</p>
+            </div>
+            <div class="project__block">
+              <div class="project__label">Solution</div>
+              <p>IR + ultrasonic sensor grid fused with a cloud dashboard exposing live slot status via a mobile-first interface.</p>
+            </div>
+            <div class="project__block">
+              <div class="project__label">Impact</div>
+              <p>Faster slot discovery, fewer emissions, and analytics for lot operators.</p>
+            </div>
+            <ul class="project__stack"><li>Arduino</li><li>C++</li><li>IoT</li><li>MQTT</li></ul>
+            <div class="project__ctas">
+              <a class="btn btn--sm magnetic" href="https://github.com/Protyasha03" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--sm btn--ghost magnetic" href="#contact">Live Demo</a>
+            </div>
+          </div>
+          <div class="project__mockup" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <!-- 05 -->
+      <article class="project glass" data-index="05" data-mockup="rccar" data-testid="project-rccar">
+        <div class="project__meta">
+          <div class="project__index">05</div>
+          <div class="project__cat">Embedded · Robotics</div>
+        </div>
+        <div class="project__inner">
+          <div class="project__copy">
+            <h3 class="project__title">Bluetooth Controlled RC Car</h3>
+            <div class="project__block">
+              <div class="project__label">Problem</div>
+              <p>Learning embedded programming and wireless control end-to-end without breaking the bank.</p>
+            </div>
+            <div class="project__block">
+              <div class="project__label">Solution</div>
+              <p>An Arduino-based RC car controlled over Bluetooth from a companion Android app — a compact platform for experimenting with control loops.</p>
+            </div>
+            <div class="project__block">
+              <div class="project__label">Impact</div>
+              <p>Hands-on foundation for the radar &amp; parking projects.</p>
+            </div>
+            <ul class="project__stack"><li>Arduino</li><li>HC-05</li><li>C</li><li>Android</li></ul>
+            <div class="project__ctas">
+              <a class="btn btn--sm magnetic" href="https://github.com/Protyasha03" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--sm btn--ghost magnetic" href="#contact">Live Demo</a>
+            </div>
+          </div>
+          <div class="project__mockup" aria-hidden="true"></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="achievements section" data-testid="certifications-section">
+    <div class="section__eyebrow"><span>05</span> Certifications</div>
+    <h2 class="section__title reveal-lines">
+      Signals from the road — competitions, programs and <em>proofs of learning</em>.
+    </h2>
+
+    <div class="achievements__grid">
+      <article class="cert glass tilt" data-testid="cert-summer">
+        <div class="cert__ribbon">Top 10%</div>
+        <div class="cert__title">Summer Analytics 2025</div>
+        <div class="cert__org">IIT Guwahati · Consulting &amp; Analytics Club</div>
+        <p class="cert__desc">Top 10 percentile finish across a 4-week applied analytics program.</p>
+      </article>
+
+      <article class="cert glass tilt" data-testid="cert-sih">
+        <div class="cert__ribbon">Finalist</div>
+        <div class="cert__title">Smart India Hackathon</div>
+        <div class="cert__org">Ministry of Education, GoI</div>
+        <p class="cert__desc">National-level innovation hackathon on real government + industry problem statements.</p>
+      </article>
+
+      <article class="cert glass tilt" data-testid="cert-cs">
+        <div class="cert__title">CodeSprint 2.0</div>
+        <div class="cert__org">Competitive Programming</div>
+        <p class="cert__desc">Algorithmic sprint challenge — DSA and problem-solving under time.</p>
+      </article>
+
+      <article class="cert glass tilt" data-testid="cert-automatrix">
+        <div class="cert__title">Automatrix 2.0</div>
+        <div class="cert__org">Automation &amp; RPA</div>
+        <p class="cert__desc">Themed competition centred on process automation and RPA design.</p>
+      </article>
+
+      <article class="cert glass tilt" data-testid="cert-asteroid">
+        <div class="cert__ribbon">NASA</div>
+        <div class="cert__title">Asteroid Search Training</div>
+        <div class="cert__org">IASC · NASA-affiliated program</div>
+        <p class="cert__desc">Training campaign on identifying near-Earth asteroids from sky survey data.</p>
+      </article>
+
+      <article class="cert glass tilt" data-testid="cert-uipath">
+        <div class="cert__title">Empowering Automation for Everyone</div>
+        <div class="cert__org">UiPath Academy</div>
+        <p class="cert__desc">RPA fundamentals, orchestrator flows and bot design principles.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="education section" data-testid="education-section">
+    <div class="section__eyebrow"><span>06</span> Education</div>
+    <h2 class="section__title reveal-lines">
+      Where the <em>foundations</em> are being laid.
+    </h2>
+
+    <div class="edu__wrap">
+      <div class="edu__timeline">
+        <div class="edu__node"></div>
+        <div class="edu__line"></div>
+      </div>
+      <article class="edu__card glass tilt" data-testid="edu-kiit">
+        <div class="edu__year">2023 — Present</div>
+        <div class="edu__degree">B.Tech · Electronics &amp; Computer Science Engineering</div>
+        <div class="edu__school">Kalinga Institute of Industrial Technology</div>
+        <div class="edu__meta">
+          <div class="edu__cgpa">
+            <span class="edu__cgpa-num" data-count="8.33" data-decimals="2">0</span>
+            <span class="edu__cgpa-label">/ 10 CGPA</span>
+          </div>
+          <p class="edu__desc">Coursework spanning DSP, ML, algorithms, embedded systems and control — with an active research affiliation at the IEEE SPS chapter.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact section" data-testid="contact-section">
+    <div class="section__eyebrow"><span>07</span> Contact</div>
+    <h2 class="section__title reveal-lines">
+      Let's build something that <em>thinks</em>.
+    </h2>
+
+    <div class="contact__grid">
+      <form class="contact__form glass" data-testid="contact-form" novalidate>
+        <div class="contact__row">
+          <label class="field">
+            <span class="field__label">Your name</span>
+            <input type="text" name="name" required data-testid="contact-name" placeholder=" " />
+            <span class="field__underline"></span>
+          </label>
+          <label class="field">
+            <span class="field__label">Your email</span>
+            <input type="email" name="email" required data-testid="contact-email" placeholder=" " />
+            <span class="field__underline"></span>
+          </label>
+        </div>
+        <label class="field">
+          <span class="field__label">Subject</span>
+          <input type="text" name="subject" data-testid="contact-subject" placeholder=" " />
+          <span class="field__underline"></span>
+        </label>
+        <label class="field field--area">
+          <span class="field__label">Message</span>
+          <textarea name="message" rows="5" required data-testid="contact-message" placeholder=" "></textarea>
+          <span class="field__underline"></span>
+        </label>
+        <button type="submit" class="btn btn--primary magnetic" data-testid="contact-submit">
+          <span class="btn__label">Transmit message</span>
+          <span class="btn__glow"></span>
+        </button>
+        <div class="contact__success" data-testid="contact-success" aria-live="polite">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12l5 5L20 6"/></svg>
+          Signal received. I'll reply within 24 hours.
+        </div>
+      </form>
+
+      <aside class="contact__side glass" data-testid="contact-side">
+        <h3>Direct channels</h3>
+        <a class="contact__row-link magnetic" href="mailto:03protyashapahari@gmail.com" data-testid="contact-email-link">
+          <div class="contact__row-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </div>
+          <div>
+            <div class="contact__row-key">Email</div>
+            <div class="contact__row-val">03protyashapahari@gmail.com</div>
+          </div>
+        </a>
+        <a class="contact__row-link magnetic" href="tel:+917501776233" data-testid="contact-phone-link">
+          <div class="contact__row-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2z"/></svg>
+          </div>
+          <div>
+            <div class="contact__row-key">Phone</div>
+            <div class="contact__row-val">+91 75017 76233</div>
+          </div>
+        </a>
+        <a class="contact__row-link magnetic" href="https://github.com/Protyasha03" target="_blank" rel="noopener" data-testid="contact-github-link">
+          <div class="contact__row-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12A11.5 11.5 0 0 0 8.36 22.9c.58.11.79-.25.79-.55 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.77 1.06.77 2.14 0 1.55-.01 2.8-.01 3.18 0 .3.21.67.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </div>
+          <div>
+            <div class="contact__row-key">GitHub</div>
+            <div class="contact__row-val">@Protyasha03</div>
+          </div>
+        </a>
+        <a class="contact__row-link magnetic" href="https://www.linkedin.com/in/protyasha-pahari-548791365" target="_blank" rel="noopener" data-testid="contact-linkedin-link">
+          <div class="contact__row-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.71h.05c.53-.94 1.82-1.93 3.75-1.93 4.01 0 4.75 2.64 4.75 6.08V21H18v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.92 1.3-1.92 2.63V21H10z"/></svg>
+          </div>
+          <div>
+            <div class="contact__row-key">LinkedIn</div>
+            <div class="contact__row-val">/in/protyasha-pahari</div>
+          </div>
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__mark">PP</span>
+        <span>Protyasha Pahari — engineering intelligent systems.</span>
+      </div>
+      <div class="footer__meta">
+        <span>© <span id="year"></span> · Handcrafted with GSAP + Three.js</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Libraries (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+
+  <!-- App scripts -->
+  <script defer src="%PUBLIC_URL%/js/network.js"></script>
+  <script defer src="%PUBLIC_URL%/js/cursor.js"></script>
+  <script defer src="%PUBLIC_URL%/js/scroll.js"></script>
+  <script defer src="%PUBLIC_URL%/js/hero.js"></script>
+  <script defer src="%PUBLIC_URL%/js/projects.js"></script>
+  <script defer src="%PUBLIC_URL%/js/animations.js"></script>
+  <script defer src="%PUBLIC_URL%/js/main.js"></script>
+</body>
+</html>

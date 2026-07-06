@@ -1,0 +1,72 @@
+/* About */
+.about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+.about__lead { padding: 40px; border-radius: var(--radius-xl); }
+.about__lead p { font-size: clamp(16px, 1.3vw, 19px); color: var(--ink-2); line-height: 1.7; }
+.about__lead p + p { margin-top: 20px; }
+
+.about__stats {
+  list-style: none; padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.about__stats li {
+  padding: 24px;
+  border-radius: 22px;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.about__stats li:hover { transform: translateY(-4px); }
+.about__stat-num {
+  font-family: var(--f-serif);
+  font-size: clamp(2.2rem, 3.4vw, 2.8rem);
+  color: #fff;
+  line-height: 1;
+}
+.about__stat-label { margin-top: 8px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-3); }
+
+/* Experience */
+.exp__timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.exp__card {
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  transition: transform .4s cubic-bezier(.2,.7,.2,1), border-color .4s;
+}
+.exp__card:hover { transform: translateY(-6px); }
+.exp__card:hover::before { opacity: 1; }
+.exp__badge {
+  display: inline-block;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--cyan);
+  background: rgba(0,229,255,.08);
+  border: 1px solid rgba(0,229,255,.2);
+  margin-bottom: 18px;
+}
+.exp__role { font-weight: 600; font-size: 17px; color: #fff; }
+.exp__org { font-family: var(--f-mono); font-size: 12px; color: var(--ink-3); margin-top: 4px; letter-spacing: .04em; }
+.exp__desc { margin-top: 14px; font-size: 14px; color: var(--ink-2); line-height: 1.6; }
+.exp__tags { list-style: none; margin: 18px 0 0; padding: 0; display: flex; gap: 8px; flex-wrap: wrap; }
+.exp__tags li {
+  padding: 5px 10px; border-radius: 999px;
+  font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .1em;
+  color: var(--ink-3);
+  border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,.02);
+}
+
+@media (max-width: 900px) {
+  .about__grid { grid-template-columns: 1fr; }
+  .exp__timeline { grid-template-columns: 1fr; }
+}
